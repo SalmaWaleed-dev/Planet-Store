@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -21,8 +22,8 @@ header {
     transform: translateX(-50%);
     padding: 15px 30px;
     border-radius: 50px;
-    margin: 0;
     box-shadow: 8px 8px 10px rgba(105, 103, 103, 0.244);
+    z-index: 1000;
 }
 
 .nav-bar{
@@ -81,7 +82,8 @@ header {
     gap: 15px;
 }
 
-.actions .login-btn {
+.login-btn , .shop-btn{
+    display: inline-block;
     color: white;
     background-color: #1f4d3a;
     font-weight: bold;
@@ -92,7 +94,7 @@ header {
     cursor: pointer;
 }
 
-.actions .login-btn:hover{
+.actions .login-btn:hover ,  .shop-btn:hover{
     background-color: #163a2b;
     transform: translateY(-2px);
 }
@@ -104,4 +106,47 @@ header {
 
 .links .links-list li a:hover {
     color: #1f4d3a;
+}
+
+.main-section {
+    margin: 150px ;
+    padding: 40px;
+    display: grid;
+    align-items: center;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    text-align: center;
+    color: #1e1e1e;
+    border: 1px solid #4f4f4f2a;
+    padding: 15px 30px;
+    gap: 40px;
+    border-radius: 50px;
+    box-shadow: 8px 8px 10px rgba(105, 103, 103, 0.244);
+}
+
+.main-section .text{
+    margin: 20px ;
+}
+
+.main-section .text .h {
+    margin-bottom: 10px;
+}
+
+.main-section .text .p{
+    margin-bottom: 20px ;
+    color: #4f4f4f;
+}
+
+.h{
+    background-image: url("../Images/d1222c9626abf91eb22498aa2227ac25\ \(1\).jpg");
+    background-size: cover; 
+    background-position: center; 
+    -webkit-background-clip: text; 
+    background-clip: text;         
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    font-size: 60px; 
+    font-weight: bold;
 }
