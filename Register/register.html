@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form - Plant Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-card">
+            <div class="back-button">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="header">
+                <h1>Hello! Register to get started</h1>
+                <img src="../images/Leaves.png" alt="leaves" class="leaves-img">
+            </div>
+
+            <form action="register.php" method="POST">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name= "Name" placeholder ="Enter Your Name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+ <button type="Register" class="btn-register">Register</button>
+
+                <div class="social-group">
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-facebook-f" style="color: #4032be;"></i>
+                    </a>
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-google" style="color: #ab3232;"></i>
+                    </a>
+                
+                     <a href="#" class="social-btn">
+                        <i class="fab fa-apple" style="color: black;"></i>
+                    </a>
+                </div>
+
+            </form>
+
+            <div class="footer">
+                <p>Already have an account? <a href="../Login/login.html">Login Now</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
