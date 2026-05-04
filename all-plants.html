@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Plants - Plant Store</title>
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-        }
-
-        
         .container {
-            max-width: 1100px;
-            margin: 40px auto; 
-            padding: 40px 20px;
-            border-top: 1px solid #1b4332;
-            border-bottom: 1px solid #1b4332;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            border: none;
         }
 
         .section-title {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 50px;
             color: #1a1a1a;
         }
 
-        
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 50px; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
         .product-card {
+            border: 1px solid #eee;
+            border-radius: 15px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            background: #fff;
+            padding: 10px;
+            
+           
         }
 
         .image-box {
-    position: relative;
-    width: 100%;
-    height: 500px; 
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    overflow: hidden;
-}
+            position: relative;
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center; 
-}
+        .image-box img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
 
         .heart-icon {
             position: absolute;
@@ -62,78 +63,64 @@
             right: 15px;
             background: white;
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            color: #1b4332;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
         }
 
         .info {
             display: flex;
             justify-content: space-between;
-            padding: 15px 0;
-            font-size: 16px;
-            color: #555;
+            padding: 15px 5px;
             font-family: Arial, sans-serif;
         }
 
-        .price {
+        .info span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .info .price {
             font-weight: bold;
             color: #000;
+            font-size: 16px;
         }
 
         .buy-now {
             background-color: #1b4332;
             color: white;
             text-align: center;
-            padding: 12px;
+            padding: 12px 0;
             text-decoration: none;
-            border-radius: 4px;
-            font-family: Arial, sans-serif;
+            border-radius: 8px;
             font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .buy-now:hover {
-            background-color: #2d5a44;
-        }
-
-        
-        @media (max-width: 1024px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr); 
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .products-grid {
-                grid-template-columns: 1fr; 
-            }
+            font-size: 14px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1 class="section-title">Our Plant Collection</h1>
+    <div class="container">
+    <h2 class="section-title">A selection of plants</h2>
 
     <div class="products-grid">
-        
-        
+
+        <!-- كارت 1 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/download (12).jpg" alt="plant">
+                <img src="Images/download (1).jpg" alt="Money plant">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$20.15</span>
+                <span>parlor palm</span>
+                <span class="price">$40.12</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
@@ -141,12 +128,12 @@
         <!-- كارت 2 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/download (5).jpg" alt="plant">
+                <img src="Images/download (11).jpg" alt="Areca palm">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$20.15</span>
+                <span>bromeliad</span>
+                <span class="price">$25.15</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
@@ -154,12 +141,12 @@
         <!-- كارت 3 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/download (1).jpg" alt="plant">
+                <img src="Images/download (12).jpg" alt="Bamboo plant">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$10.15</span>
+                <span>ZZ plant</span>
+                <span class="price">$33.12</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
@@ -167,63 +154,116 @@
         <!-- كارت 4 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/download (6).jpg" alt="plant">
+                <img src="Images/download (5).jpg" alt="peace lily">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$35.15</span>
+                <span>peace Lily</span>
+                <span class="price">$5.10</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
 
+        <!-- كارت 5 -->
+        
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/pexels-ebahir-32106613 (1).jpg" alt="plant">
+                <img src="Images/download (9).jpg" alt="Ferns">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$31.17</span>
+                <span>Rauarey</span>
+                <span class="price">$77.10</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
+        <!-- كارت 6 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/download (9).jpg" alt="plant">
+                <img src="Images/pexels-ebahir-32106613 (1).jpg" alt="Ferns">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$55.22</span>
+                <span>syrmines</span>
+                <span class="price">$44.11</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
+        <!-- كارت7 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/pexels-nguy-n-ti-n-th-nh-2150376175-31990201.jpg" alt="plant">
+                <img src="Images/pexels-elgolovchenko-10922365.jpg" alt="Ferns">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$70.14</span>
+                <span></span>
+                <span class="price">$61.7</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
+        <!-- كارت8 -->
         <div class="product-card">
             <div class="image-box">
-                <img src="Images/pexels-elgolovchenko-10922365.jpg" alt="plant">
+                <img src="Images/pexels-mysara-hassan-116278479-30661701.jpg" alt="Ferns">
                 <a href="#" class="heart-icon">♡</a>
             </div>
             <div class="info">
-                <span>Planet Name</span>
-                <span class="price">$45.11</span>
+                <span>Icuseinne</span>
+                <span class="price">$84.5</span>
+            </div>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <!-- كارت 9 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="Images/pexels-nguy-n-ti-n-th-nh-2150376175-31990201.jpg" alt="Ferns">
+                <a href="#" class="heart-icon">♡</a>
+            </div>
+            <div class="info">
+                <span>Nerve plant</span>
+                <span class="price">$21.7</span>
+            </div>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <!-- كارت 10 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="Images/ASTIDY Artificial Palm Tree 5FT - Fake Tree with Black Tall Planter - Faux Tropical Areca Floor Plant in Pot - Artificial Silk Plant for Home Office Living Room Decor Indoor.jpg" alt="Ferns">
+                <a href="#" class="heart-icon">♡</a>
+            </div>
+            <div class="info">
+                <span>Ferns</span>
+                <span class="price">$89.10</span>
+            </div>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <!-- كارت 11 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="Images/Costa Farms Majesty Palm Live Plant, Spring Decor, Giftable Plant Item, Indoor and Outdoor Live Palm Tree, Potted in Natural Pot, Tropical Patio, 3-4 Feet Tall.jpg" alt="Ferns">
+                <a href="#" class="heart-icon">♡</a>
+            </div>
+            <div class="info">
+                <span>snake plan</span>
+                <span class="price">$69.12</span>
+            </div>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <!-- كارت 6 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="Images/download (8).jpg" alt="Bothos">
+                <a href="#" class="heart-icon">♡</a>
+            </div>
+            <div class="info">
+                <span>Bothos</span>
+                <span class="price">$50.26</span>
             </div>
             <a href="#" class="buy-now">Buy Now</a>
         </div>
 
     </div>
-</div>
 
+</div>
 </body>
 </html>
