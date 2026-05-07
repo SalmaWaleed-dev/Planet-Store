@@ -25,6 +25,43 @@ header {
     box-shadow: 8px 8px 10px rgba(105, 103, 103, 0.244);
     z-index: 1000;
     background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: #1f4d3ad4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    top: 0%;
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 0%;
+}
+
+.header.scrolled .login-btn{
+    display: inline-block;
+    color: #1f4d3a;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 10px rgba(105, 103, 103, 0.244);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.header.scrolled .login-btn:hover{
+    background-color: whitesmoke;
+}
+.header.scrolled .links-list li a {
+    color: white;
+}
+
+.header.scrolled .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .nav-bar {
