@@ -27,8 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error: This email is already registered.");
     }
 
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$name', '$email', '$password')";
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$name', '$email', '$hashed_password')";
+    
     if (mysqli_query($conn, $sql)) {
         echo "<script>alert('Registration Successful!'); window.location.href='../Login/login.html';</script>";
     } else {

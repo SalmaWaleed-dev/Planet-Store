@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../Images/Background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.711);
+
+}
+
+.nav-logo i {
+    font-size: 28px;
+    color: #2e7d32;
+}
+
+.nav-right-text {
+    font-size: 0.9em;
+    color: #444;
+}
+
+.nav-right-text a {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box {
+    position: relative;
+    width: 500px;
+    height:500px;
+    background: #e6dfdf;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-right: 950px; 
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height:500px;
+    background: linear-gradient(0deg, transparent, #4caf50, #81c784);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height:500px;
+    background: linear-gradient(0deg, transparent, #4caf50, #81c784);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+form {
+    position: absolute;
+    inset: 4px; 
+    border-radius: 16px;
+    background: #fefee8;
+    z-index: 10;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #2e7d32;
+    font-size: 1em;
+    z-index: 10;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #888;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+    color: #4caf50;
+    transform: translateY(-34px);
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #4caf50;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.links a {
+    font-size: 0.8em;
+    color: #666;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background: #2e7d32;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.or-text {
+    text-align: center;
+    margin: 15px 0;
+    font-size: .9em;
+    color: #999797;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.social-btn {
+    flex: 1;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: .85em;
+    font-weight: 900;
+    color: #020202;
+}
+
+.register-link a {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: none;
+}
